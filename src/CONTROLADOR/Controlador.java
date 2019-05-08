@@ -24,8 +24,7 @@ public class Controlador implements ActionListener{
     private plantilla_Inscripcion_centroCosto view_PICc;
     private plantilla_Inscripcion_comprobante view_PIC;
     private Modelo model;     
-    private JButton b1 = new JButton("Boton 1");
-    
+  
 
     
     public Controlador(Indice view_Indice,MaestroProveedor_index view_MP,plantilla_Filtro view_PF,
@@ -38,8 +37,9 @@ public class Controlador implements ActionListener{
         this.view_PICc = view_PICc;
         this.view_PIMP = view_PIMP;
         this.model = model;
-        b1.addActionListener(this);
-        
+ 
+        this.view_Indice.Maestro_Proveedor.addActionListener(this);
+
     }
     
     public void Iniciar(){
@@ -47,13 +47,15 @@ public class Controlador implements ActionListener{
         view_Indice.setLocationRelativeTo(null);
     }
     
-    public void actionPerformed(ActionEvent e){
-    
-        if (e.getSource() == b1) {
-            System.out.println("Hola mundo");
-        }
-    
-///e.getSource()=
+    public void actionPerformed(ActionEvent e){        
+        System.out.println("Hola mundo");
+        view_MP.setLocationRelativeTo(null);
+        view_MP.setVisible(true);   
+        view_Indice.dispose();
+        
     }
+
+
+
     
 }
