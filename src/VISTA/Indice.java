@@ -238,10 +238,10 @@ public class Indice extends javax.swing.JFrame {
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton Centro_Costo;
-    private javax.swing.JButton Maestro_Proveedor;
-    private javax.swing.JButton Movemientos_tesoria;
-    private javax.swing.JButton comprobante;
+    public javax.swing.JButton Centro_Costo;
+    public javax.swing.JButton Maestro_Proveedor;
+    public javax.swing.JButton Movemientos_tesoria;
+    public javax.swing.JButton comprobante;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JMenu jMenu1;
     private javax.swing.JMenu jMenu2;

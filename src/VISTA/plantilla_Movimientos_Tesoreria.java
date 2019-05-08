@@ -9,12 +9,12 @@ package VISTA;
  *
  * @author Labing
  */
-public class vISTAEJEMPLO extends javax.swing.JFrame {
+public class plantilla_Movimientos_Tesoreria extends javax.swing.JFrame {
 
     /**
-     * Creates new form vISTAEJEMPLO
+     * Creates new form plantilla_Movimientos_Tesoreria
      */
-    public vISTAEJEMPLO() {
+    public plantilla_Movimientos_Tesoreria() {
         initComponents();
     }
 
@@ -60,20 +60,20 @@ public class vISTAEJEMPLO extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(vISTAEJEMPLO.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(plantilla_Movimientos_Tesoreria.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(vISTAEJEMPLO.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(plantilla_Movimientos_Tesoreria.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(vISTAEJEMPLO.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(plantilla_Movimientos_Tesoreria.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(vISTAEJEMPLO.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(plantilla_Movimientos_Tesoreria.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new vISTAEJEMPLO().setVisible(true);
+                new plantilla_Movimientos_Tesoreria().setVisible(true);
             }
         });
     }
