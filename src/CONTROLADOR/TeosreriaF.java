@@ -22,14 +22,13 @@ public class TeosreriaF {
         Indice view_Indice = new Indice();
         MaestroProveedor_index view_MP = new MaestroProveedor_index();
         plantilla_Filtro view_PF = new plantilla_Filtro();
-        plantilla_Incripcion_Maestro_Proveedores view_PIMP = new plantilla_Incripcion_Maestro_Proveedores();
         plantilla_Inscripcion_centroCosto view_PICc = new plantilla_Inscripcion_centroCosto();
         plantilla_Inscripcion_comprobante view_PIC = new plantilla_Inscripcion_comprobante();
         plantilla_Movimientos_Tesoreria view_MT = new plantilla_Movimientos_Tesoreria();
         
         Modelo model = new Modelo();
         
-        Controlador co = new Controlador(view_Indice,view_MP,view_PF,view_PIMP,view_PICc,view_PIC,model,view_MT);
+        Controlador_Indice co = new Controlador_Indice(view_Indice,view_MP,view_PF,view_PICc,view_PIC,model,view_MT);
         co.Iniciar();
         view_Indice.setVisible(true);
     }

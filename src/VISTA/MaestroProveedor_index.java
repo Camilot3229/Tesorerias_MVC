@@ -73,10 +73,25 @@ public class MaestroProveedor_index extends javax.swing.JFrame {
         });
 
         Editar.setText("Editar");
+        Editar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                EditarActionPerformed(evt);
+            }
+        });
 
         Mostrar.setText("Mostrar");
+        Mostrar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                MostrarActionPerformed(evt);
+            }
+        });
 
         Eliminaruno.setText("Eliminar especifico");
+        Eliminaruno.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                EliminarunoActionPerformed(evt);
+            }
+        });
 
         EliminarTodo.setText("Eliminar todo ");
         EliminarTodo.addActionListener(new java.awt.event.ActionListener() {
@@ -157,6 +172,18 @@ public class MaestroProveedor_index extends javax.swing.JFrame {
     private void CrearActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CrearActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_CrearActionPerformed
+
+    private void EditarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EditarActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_EditarActionPerformed
+
+    private void MostrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MostrarActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_MostrarActionPerformed
+
+    private void EliminarunoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EliminarunoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_EliminarunoActionPerformed
  
     
     public void ejecutar(){
@@ -199,11 +226,11 @@ public class MaestroProveedor_index extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton Crear;
-    private javax.swing.JButton Editar;
-    private javax.swing.JButton EliminarTodo;
-    private javax.swing.JButton Eliminaruno;
-    private javax.swing.JButton Mostrar;
+    public javax.swing.JButton Crear;
+    public javax.swing.JButton Editar;
+    public javax.swing.JButton EliminarTodo;
+    public javax.swing.JButton Eliminaruno;
+    public javax.swing.JButton Mostrar;
     private javax.swing.JButton Retorno;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JMenu jMenu1;

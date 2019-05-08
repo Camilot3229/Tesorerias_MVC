@@ -15,12 +15,11 @@ import javax.swing.JButton;
  *
  * @author Felipe
  */
-public class Controlador implements ActionListener{
+public class Controlador_Indice implements ActionListener{
     
     private Indice view_Indice;
     private MaestroProveedor_index view_MP;
     private plantilla_Filtro view_PF;
-    private plantilla_Incripcion_Maestro_Proveedores view_PIMP;
     private plantilla_Inscripcion_centroCosto view_PICc;
     private plantilla_Inscripcion_comprobante view_PIC;
     private plantilla_Movimientos_Tesoreria view_MT;
@@ -28,20 +27,24 @@ public class Controlador implements ActionListener{
   
 
     
-    public Controlador(Indice view_Indice,MaestroProveedor_index view_MP,plantilla_Filtro view_PF,
-    plantilla_Incripcion_Maestro_Proveedores view_PIMP,plantilla_Inscripcion_centroCosto view_PICc,
+    public Controlador_Indice(Indice view_Indice,MaestroProveedor_index view_MP,plantilla_Filtro view_PF,plantilla_Inscripcion_centroCosto view_PICc,
     plantilla_Inscripcion_comprobante view_PIC,Modelo model,plantilla_Movimientos_Tesoreria view_MT){
         this.view_Indice = view_Indice;
         this.view_MP = view_MP;
         this.view_PF = view_PF;
         this.view_PIC = view_PIC;
         this.view_PICc = view_PICc;
-        this.view_PIMP = view_PIMP;
         this.model = model;
         this.view_MT = view_MT;
  
         this.view_Indice.Maestro_Proveedor.addActionListener(this);
         this.view_Indice.Centro_Costo.addActionListener(this);
+        this.view_Indice.comprobante.addActionListener(this);
+        this.view_Indice.Movemientos_tesoria.addActionListener(this);
+        
+        this.view_MP.Crear.addActionListener(this);
+        this.view_MP.Editar.addActionListener(this);
+        this.view_MP.Mostrar.addActionListener(this);
 
     }
     
@@ -58,10 +61,10 @@ public class Controlador implements ActionListener{
             this.cc();
         }
         if (e.getSource() == view_Indice.Movemientos_tesoria) {
-            
+            this.mt();
         }
-        if (e.getSource() == view_Indice.Movemientos_tesoria) {
-            
+        if (e.getSource() == view_Indice.comprobante) {
+            this.c();
         }
         /*
         System.out.println("Hola mundo");
