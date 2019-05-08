@@ -5,13 +5,9 @@
  */
 package CONTROLADOR;
 
-import MODELO.Modelo;
-import VISTA.Indice;
-import VISTA.MaestroProveedor_index;
-import VISTA.plantilla_Filtro;
-import VISTA.plantilla_Incripcion_Maestro_Proveedores;
-import VISTA.plantilla_Inscripcion_centroCosto;
-import VISTA.plantilla_Inscripcion_comprobante;
+import MODELO.*;
+import VISTA.*;
+
 
 /**
  *
@@ -29,6 +25,8 @@ public class TeosreriaF {
         plantilla_Incripcion_Maestro_Proveedores view_PIMP = new plantilla_Incripcion_Maestro_Proveedores();
         plantilla_Inscripcion_centroCosto view_PICc = new plantilla_Inscripcion_centroCosto();
         plantilla_Inscripcion_comprobante view_PIC = new plantilla_Inscripcion_comprobante();
+        plantilla_Movimientos_Tesoreria view_MT = new plantilla_Movimientos_Tesoreria();
+        
         Modelo model = new Modelo();
         
         Controlador co = new Controlador(view_Indice,view_MP,view_PF,view_PIMP,view_PICc,view_PIC,model);
