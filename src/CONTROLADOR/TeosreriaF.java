@@ -29,7 +29,7 @@ public class TeosreriaF {
         
         Modelo model = new Modelo();
         
-        Controlador co = new Controlador(view_Indice,view_MP,view_PF,view_PIMP,view_PICc,view_PIC,model);
+        Controlador co = new Controlador(view_Indice,view_MP,view_PF,view_PIMP,view_PICc,view_PIC,model,view_MT);
         co.Iniciar();
         view_Indice.setVisible(true);
     }
