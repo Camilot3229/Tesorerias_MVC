@@ -6,15 +6,15 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 
 public class Conexion {
-	String bd= "inventario";
-	private final String url = "jdbc:mysql://localhost:3306/"+bd;
-	Connection con = null;
+
+
+	
 
 	public Conexion() {
 		try {
-			Class.forName("com.mysql.jdbc.Driver");
-			con = DriverManager.getConnection(url, "root", "");
-			if (con != null) {
+			Class.forName("com.mysql.cj.jdbc.Driver");
+			java.sql.Connection conexion= DriverManager.getConnection("jdbc:mysql://localhost:3306/parcial_cartera","root","");
+			if (conexion != null) {
 				System.out.println("Conexion a base de datos inventario listo");
 			}
 		} catch (SQLException e) {
@@ -24,12 +24,7 @@ public class Conexion {
 		}
 	}
 
-	public Connection conectado() {
-		return con;
-	}
+	
 
-	public void desconectar() {
-		con = null;
-		System.out.println("conexion terminada");
-	}
+
 }

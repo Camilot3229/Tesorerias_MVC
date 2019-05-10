@@ -74,9 +74,15 @@ public class Controlador_Indice implements ActionListener{
     }
     
     private void mp (){// Metodo para hacer los procesos de los diferentes botones
+        view_MP = new MaestroProveedor_index();
+        plantilla_Incripcion_Maestro_Proveedores view_PIMP = new plantilla_Incripcion_Maestro_Proveedores();
+        
+        Controlador_Maestro_Proveedores cmp = new Controlador_Maestro_Proveedores(view_MP,view_PIMP,model,view_Indice);
         view_MP.setLocationRelativeTo(null);
         view_MP.setVisible(true);   
-        view_Indice.dispose();       
+        view_Indice.dispose();  
+        
+        
     }
     
     private void cc (){

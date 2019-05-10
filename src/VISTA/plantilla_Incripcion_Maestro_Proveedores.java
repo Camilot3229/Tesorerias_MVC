@@ -6,6 +6,9 @@
 package VISTA;
 
 
+import java.sql.DriverManager;
+import java.sql.SQLException;
+import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
@@ -33,6 +36,7 @@ public class plantilla_Incripcion_Maestro_Proveedores extends javax.swing.JFrame
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jTextField1 = new javax.swing.JTextField();
         jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
@@ -52,6 +56,8 @@ public class plantilla_Incripcion_Maestro_Proveedores extends javax.swing.JFrame
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
         jMenu2 = new javax.swing.JMenu();
+
+        jTextField1.setText("jTextField1");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -298,7 +304,30 @@ public class plantilla_Incripcion_Maestro_Proveedores extends javax.swing.JFrame
     long Telefono=1;
     String nombre="", direccion="", ciudad="", tipo="";*/
     private void Guardar_maestroProveedorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Guardar_maestroProveedorActionPerformed
-        // TODO add your handling code here:
+   
+		try {
+			Class.forName("com.mysql.cj.jdbc.Driver");
+			java.sql.Connection conexion= DriverManager.getConnection("jdbc:mysql://localhost:3306/Tesoreria","root","");
+			
+                        int nit = Integer.parseInt(NIT_mestroProveedor.getText());
+                        String nombre = Nombre_mestroProveedor.getText();
+                        String direccion = Direccion_mestroProveedor.getText();
+                        int tel = Integer.parseInt(Telefono_mestroProveedor.getText());
+                        String ciudad = Ciudad_mestroProveedor.getText();
+                        String tipo = Tipo_mestroProveedor.getText();
+                        
+                        
+                        String query="insert into Maestro_Proveedores (nit,nombre,direccion,telefono,ciudad,tipo) values("+nit+",'"+nombre+"','"+direccion+"',"+tel+",'"+ciudad+"','"+tipo+"')";
+                        Statement s=conexion.createStatement();
+                        s.executeUpdate(query);
+                        
+                        
+		} catch (SQLException e) {
+			System.out.println(e.toString()+" Error 1");
+		} catch (ClassNotFoundException e) {
+			System.out.println(e.toString()+" error 2");
+		}
+	
    
     }//GEN-LAST:event_Guardar_maestroProveedorActionPerformed
     public void crear() {
@@ -347,14 +376,14 @@ public class plantilla_Incripcion_Maestro_Proveedores extends javax.swing.JFrame
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton Cancela_mestroProveedor;
-    private javax.swing.JTextField Ciudad_mestroProveedor;
-    private javax.swing.JTextField Direccion_mestroProveedor;
-    private javax.swing.JButton Guardar_maestroProveedor;
-    private javax.swing.JTextField NIT_mestroProveedor;
-    private javax.swing.JTextField Nombre_mestroProveedor;
-    private javax.swing.JTextField Telefono_mestroProveedor;
-    private javax.swing.JTextField Tipo_mestroProveedor;
+    public javax.swing.JButton Cancela_mestroProveedor;
+    public javax.swing.JTextField Ciudad_mestroProveedor;
+    public javax.swing.JTextField Direccion_mestroProveedor;
+    public javax.swing.JButton Guardar_maestroProveedor;
+    public javax.swing.JTextField NIT_mestroProveedor;
+    public javax.swing.JTextField Nombre_mestroProveedor;
+    public javax.swing.JTextField Telefono_mestroProveedor;
+    public javax.swing.JTextField Tipo_mestroProveedor;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
@@ -366,5 +395,6 @@ public class plantilla_Incripcion_Maestro_Proveedores extends javax.swing.JFrame
     private javax.swing.JMenu jMenu2;
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JTextField jTextField1;
     // End of variables declaration//GEN-END:variables
 }

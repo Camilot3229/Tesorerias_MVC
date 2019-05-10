@@ -32,8 +32,18 @@ public class Controlador_Maestro_Proveedores implements ActionListener{
         this.view_MP.Mostrar.addActionListener(this);        
     }
 
+    public void Iniciar(){
+        view_Indice.setTitle("TESORERIA");
+        view_Indice.setLocationRelativeTo(null);
+    }
+    
     @Override
     public void actionPerformed(ActionEvent e) {
+        if (e.getSource() == view_MP.Crear) {
+            view_PIMP.setLocationRelativeTo(null);
+            view_PIMP.setVisible(true);
+            view_MP.dispose();              
+        }
         
     }
 }

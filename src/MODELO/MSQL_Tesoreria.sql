@@ -42,3 +42,5 @@ foreign key (cc) references Centro_Costo (id),
 foreign key (nit_Provedor) references Maestro_Proveedores (nit),
 foreign key (comprobante) references Comprobantes (comprobante)
 );
+
+SET GLOBAL time_zone = '-3:00';
